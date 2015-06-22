@@ -1,0 +1,9 @@
+C:\Users\us1\Documents\Visual Studio 2013\Projects\pdf\pdf\bin\Debug\pdf.exe.config
+C:\Users\us1\Documents\Visual Studio 2013\Projects\pdf\pdf\bin\Debug\pdf.exe
+C:\Users\us1\Documents\Visual Studio 2013\Projects\pdf\pdf\bin\Debug\pdf.pdb
+C:\Users\us1\Documents\Visual Studio 2013\Projects\pdf\pdf\bin\Debug\itextsharp.dll
+C:\Users\us1\Documents\Visual Studio 2013\Projects\pdf\pdf\bin\Debug\itextsharp.xmlworker.dll
+C:\Users\us1\Documents\Visual Studio 2013\Projects\pdf\pdf\bin\Debug\itextsharp.xml
+C:\Users\us1\Documents\Visual Studio 2013\Projects\pdf\pdf\obj\Debug\pdf.exe
+C:\Users\us1\Documents\Visual Studio 2013\Projects\pdf\pdf\obj\Debug\pdf.pdb
+C:\Users\us1\Documents\Visual Studio 2013\Projects\pdf\pdf\obj\Debug\pdf.csprojResolveAssemblyReference.cache
