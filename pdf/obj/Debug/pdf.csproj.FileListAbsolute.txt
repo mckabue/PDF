@@ -7,3 +7,6 @@ C:\Users\us1\Documents\Visual Studio 2013\Projects\pdf\pdf\bin\Debug\itextsharp.
 C:\Users\us1\Documents\Visual Studio 2013\Projects\pdf\pdf\obj\Debug\pdf.exe
 C:\Users\us1\Documents\Visual Studio 2013\Projects\pdf\pdf\obj\Debug\pdf.pdb
 C:\Users\us1\Documents\Visual Studio 2013\Projects\pdf\pdf\obj\Debug\pdf.csprojResolveAssemblyReference.cache
+B:\Docs\REPOS\PDF\pdf\bin\Debug\pdf.exe.config
+B:\Docs\REPOS\PDF\pdf\obj\Debug\pdf.exe
+B:\Docs\REPOS\PDF\pdf\obj\Debug\pdf.pdb
