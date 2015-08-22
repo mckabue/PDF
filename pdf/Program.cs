@@ -15,6 +15,8 @@ using iTextSharp.tool.xml.pipeline.html;
 using iTextSharp.tool.xml.pipeline.css;
 using iTextSharp.tool.xml.parser;
 using iTextSharp.tool.xml.pipeline.end;
+using Ghostscript.NET;
+using Spire.Pdf;
 
 
 namespace pdf
@@ -24,18 +26,25 @@ namespace pdf
         public static string appRootDir = new DirectoryInfo(Environment.CurrentDirectory).Parent.Parent.FullName + "/Contents/";
         static void Main(string[] args)
         {
-            var data = new data();
-            var questions = data.Questions();
+            //var data = new data();
+            //var questions = data.Questions();
 
-            var imageWaterMark = new ImageWaterMark();
+            //var imageWaterMark = new ImageWaterMark();
             
             //HTMLQuestionsToPDF();
 
             //string html = "<span><b>bold</b> and <em>hardsome</em> plus image <img style=\" align:right; \" src=\"C:\\Users\\us1\\Documents\\Visual Studio 2013\\Projects\\pdf\\pdf\\WP_20150504_089.jpg\"/></span>";
             //questions.ForEach(q => iTextElement(q.Message));
             
-            iTextElement();
+
+            //working
+            //iTextElement();
+            //working
             //imageInbase64Encoding();
+
+            //pdfToHtml();
+
+            LoadImageAspire();
             Console.WriteLine("Done...");
             Console.Read();
         }
@@ -205,6 +214,69 @@ namespace pdf
 
             Process.Start(appRootDir + "test.pdf");
 	    }
+
+        public static void pdfToHtml()
+        {
+            //PdfReader reader = new PdfReader(System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "Document.pdf"));
+            PdfReader reader = new PdfReader(appRootDir + "test.pdf");
+            pdfToHtml S = new pdfToHtml();
+            string F = iTextSharp.text.pdf.parser.PdfTextExtractor.GetTextFromPage(reader, 1, S);
+            Console.WriteLine(F);
+
+            using (FileStream fs = new FileStream(appRootDir + "test.html", FileMode.Create))
+            {
+                using (StreamWriter st = new StreamWriter(fs, Encoding.UTF8))
+                {
+                    st.WriteLine(F);
+                }
+
+
+                Process.Start(appRootDir + "test.html");
+            }
+
+        }
+
+        public static void LoadImage()
+        {
+            string InputPDFFile = appRootDir + "test.pdf";
+            int PageNumber = 2;
+
+            string outImageName = Path.GetFileNameWithoutExtension(InputPDFFile);
+            outImageName = outImageName + "_" + PageNumber.ToString() + "_.png";
+
+
+            GhostscriptPngDevice dev = new GhostscriptPngDevice(GhostscriptPngDeviceType.Png256);
+            dev.GraphicsAlphaBits = GhostscriptImageDeviceAlphaBits.V_4;
+            dev.TextAlphaBits = GhostscriptImageDeviceAlphaBits.V_4;
+            dev.ResolutionXY = new GhostscriptImageDeviceResolution(290, 290);
+            dev.InputFiles.Add(InputPDFFile);
+            dev.Pdf.FirstPage = PageNumber;
+            dev.Pdf.LastPage = PageNumber;
+            dev.CustomSwitches.Add("-dDOINTERPOLATE");
+
+            //dev.OutputPath = Server.MapPath(@"~/tempImages/" + outImageName);
+            dev.OutputPath = Program.appRootDir + "Contents";
+            dev.Process();
+
+        }
+
+
+
+        public static void LoadImageAspire()
+        {
+           
+            Spire.Pdf.PdfDocument pdfdocument = new Spire.Pdf.PdfDocument(appRootDir + "test.pdf");
+
+            for (int i = 0; i < pdfdocument.Pages.Count; i++)
+            {
+                System.Drawing.Image image = pdfdocument.SaveAsImage(i, 96, 96);
+                image.Save(appRootDir + "Contents" + string.Format("ImagePage{0}.png", i), System.Drawing.Imaging.ImageFormat.Png);
+            } 
+
+        }
+
+
+
 
 
         }

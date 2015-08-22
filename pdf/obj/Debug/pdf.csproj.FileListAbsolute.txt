@@ -10,3 +10,15 @@ C:\Users\us1\Documents\Visual Studio 2013\Projects\pdf\pdf\obj\Debug\pdf.csprojR
 B:\Docs\REPOS\PDF\pdf\bin\Debug\pdf.exe.config
 B:\Docs\REPOS\PDF\pdf\obj\Debug\pdf.exe
 B:\Docs\REPOS\PDF\pdf\obj\Debug\pdf.pdb
+B:\Docs\REPOS\PDF\pdf\bin\Debug\pdf.exe
+B:\Docs\REPOS\PDF\pdf\bin\Debug\pdf.pdb
+B:\Docs\REPOS\PDF\pdf\bin\Debug\itextsharp.dll
+B:\Docs\REPOS\PDF\pdf\bin\Debug\itextsharp.xmlworker.dll
+B:\Docs\REPOS\PDF\pdf\bin\Debug\itextsharp.xml
+B:\Docs\REPOS\PDF\pdf\obj\Debug\pdf.csprojResolveAssemblyReference.cache
+B:\Docs\REPOS\PDF\pdf\bin\Debug\Ghostscript.NET.dll
+B:\Docs\REPOS\PDF\pdf\bin\Debug\Ghostscript.NET.xml
+B:\Docs\REPOS\PDF\pdf\bin\Debug\Spire.License.dll
+B:\Docs\REPOS\PDF\pdf\bin\Debug\Spire.Pdf.dll
+B:\Docs\REPOS\PDF\pdf\bin\Debug\Spire.License.xml
+B:\Docs\REPOS\PDF\pdf\bin\Debug\Spire.Pdf.xml
